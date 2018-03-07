@@ -1,4 +1,4 @@
-package data.model;
+package com.d4enterprises.daggermindrocks.data.model;
 
 /**
  * Created by dakshgargas
@@ -63,7 +63,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "data.model.User{" +
+        return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +

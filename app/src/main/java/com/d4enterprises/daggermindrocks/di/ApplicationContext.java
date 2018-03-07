@@ -1,4 +1,4 @@
-package di;
+package com.d4enterprises.daggermindrocks.di;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

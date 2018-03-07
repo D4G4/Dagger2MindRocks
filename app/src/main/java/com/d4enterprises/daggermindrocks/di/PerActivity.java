@@ -1,15 +1,15 @@
-package di;
+package com.d4enterprises.daggermindrocks.di;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import javax.inject.Qualifier;
+import javax.inject.Scope;
 
 /**
  * Created by dakshgargas
  */
 
-@Qualifier
+@Scope
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ActivityContext {
+public @interface PerActivity {
 }

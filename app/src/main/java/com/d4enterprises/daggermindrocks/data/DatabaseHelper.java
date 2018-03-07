@@ -1,20 +1,25 @@
-package data;
+package com.d4enterprises.daggermindrocks.data;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.res.Resources;
 import android.database.Cursor;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import data.model.User;
+import com.d4enterprises.daggermindrocks.data.model.User;
+
+import javax.inject.Singleton;
+
+import com.d4enterprises.daggermindrocks.di.ApplicationContext;
+import com.d4enterprises.daggermindrocks.di.DatabaseInfo;
 
 /**
  * Created by dakshgargas
  */
 
+@Singleton
 public class DatabaseHelper extends SQLiteOpenHelper {
 
 //Todo: Was public
@@ -26,12 +31,10 @@ private static final String COLUMN_USER_ADDRESS = "usr_add";
 private static final String COLUMN_USER_CREATED_AT = "created_at";
 private static final String COLUMN_USER_UPDATED_AT = "updated_at";
 
-public DatabaseHelper(Context context,
-                      String name,
-                      SQLiteDatabase.CursorFactory factory,
-                      int version,
-                      DatabaseErrorHandler errorHandler) {
-    super(context, name, factory, version, errorHandler);
+public DatabaseHelper(@ApplicationContext Context context,
+                      @DatabaseInfo String name,
+                      @DatabaseInfo int version) {
+    super(context, name, null, version);
 }
 
 @Override
