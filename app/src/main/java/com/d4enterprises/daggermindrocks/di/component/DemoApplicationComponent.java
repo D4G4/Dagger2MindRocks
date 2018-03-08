@@ -1,5 +1,6 @@
 package com.d4enterprises.daggermindrocks.di.component;
 
+import android.app.Application;
 import android.content.Context;
 
 import com.d4enterprises.daggermindrocks.DemoApplication;
@@ -33,7 +34,7 @@ void inject(DemoApplication demoApplication);
 @ApplicationContext
 Context getContext();
 
-ApplicationContext getApplication();
+//Application getApplication();
 
 DataManager getDataManager();
 

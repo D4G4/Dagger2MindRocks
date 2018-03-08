@@ -10,6 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.d4enterprises.daggermindrocks.data.model.User;
 
+import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import com.d4enterprises.daggermindrocks.di.ApplicationContext;
@@ -31,6 +32,7 @@ private static final String COLUMN_USER_ADDRESS = "usr_add";
 private static final String COLUMN_USER_CREATED_AT = "created_at";
 private static final String COLUMN_USER_UPDATED_AT = "updated_at";
 
+@Inject
 public DatabaseHelper(@ApplicationContext Context context,
                       @DatabaseInfo String name,
                       @DatabaseInfo int version) {
@@ -80,6 +82,7 @@ protected User getUser(Long userId) throws Resources.NotFoundException, NullPoin
                 null, null, null);
 
         if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
             User user = new User();
             user.setId(cursor.getLong(cursor.getColumnIndex(COLUMN_USER_ID)));
             user.setAddress(cursor.getString(cursor.getColumnIndex(COLUMN_USER_ADDRESS)));

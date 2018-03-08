@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "d4enterprises.daggermindrocks"
+        applicationId "com.d4enterprises.daggermindrocks"
         minSdkVersion 23
         targetSdkVersion 26
         versionCode 1

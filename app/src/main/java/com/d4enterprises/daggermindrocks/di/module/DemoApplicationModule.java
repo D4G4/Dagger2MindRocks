@@ -11,13 +11,20 @@ import com.d4enterprises.daggermindrocks.di.ApplicationContext;
 import com.d4enterprises.daggermindrocks.di.DatabaseInfo;
 
 /**
- * Created by Dennis.
- */
-
-/**
  * DEPENDENCY PROVIDER
  * It will provide all the necessary things needed by
  * {@link com.d4enterprises.daggermindrocks.DemoApplication}
+ */
+
+/*
+ * DemoApplication has
+ *                      DataManager
+ *                           -> ApplicationContext
+ *                           -> DatabaseHelper
+ *                                       ->ApplicationContext
+ *                                       ->DatabaseInfo
+ *                                       ->DatabaseInfo
+ *                           -> SharedPrefsHelper
  */
 @Module
 public class DemoApplicationModule {
@@ -30,15 +37,14 @@ public DemoApplicationModule(Application app) {
 
 @Provides
 @ApplicationContext
-//explicitly defining the type of context
 Context provideApplicationContext() {
     return mApplication;
 }
 
-@Provides
-Application provideApplication() {
-    return mApplication;
-}
+//@Provides
+//Application provideApplication() {
+//    return mApplication;
+//}
 
 @Provides
 @DatabaseInfo

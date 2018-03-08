@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Dagger2MindRocks.iml" filepath="$PROJECT_DIR$/Dagger2MindRocks.iml" />
-      <module fileurl="file://G:\AndroidProjects\GitProject\Dagger2MindRocks\DaggerMindrocks.iml" filepath="G:\AndroidProjects\GitProject\Dagger2MindRocks\DaggerMindrocks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DaggerMindrocks.iml" filepath="$PROJECT_DIR$/DaggerMindrocks.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

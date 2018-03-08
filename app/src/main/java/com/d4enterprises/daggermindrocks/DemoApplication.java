@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 
 import com.d4enterprises.daggermindrocks.data.DataManager;
+import com.d4enterprises.daggermindrocks.di.component.DaggerDemoApplicationComponent;
 import com.d4enterprises.daggermindrocks.di.component.DemoApplicationComponent;
 import com.d4enterprises.daggermindrocks.di.module.DemoApplicationModule;
 
@@ -24,7 +25,7 @@ protected DemoApplicationComponent applicationComponent;
 @Inject
 DataManager dataManager;
 
-public static DemoApplication get(Context context) {
+public static DemoApplication getDemoApplication(Context context) {
     return (DemoApplication) context.getApplicationContext();
 }
 

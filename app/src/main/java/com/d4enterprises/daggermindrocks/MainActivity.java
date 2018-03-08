@@ -16,8 +16,6 @@ import com.d4enterprises.daggermindrocks.di.module.MainActivityModule;
 
 import javax.inject.Inject;
 
-import d4enterprises.daggermindrocks.R;
-
 public class MainActivity extends AppCompatActivity {
 
 @Inject
@@ -33,7 +31,7 @@ public MainActivityComponent getActivityComponent() {
     if (activityComponent == null) {
         activityComponent = DaggerMainActivityComponent.builder()
                 .mainActivityModule(new MainActivityModule(this))
-                .demoApplicationComponent(DemoApplication.get(this).getDemoApplicationComponent())
+                .demoApplicationComponent(DemoApplication.getDemoApplication(this).getDemoApplicationComponent())
                 .build();
     }
     return activityComponent;
